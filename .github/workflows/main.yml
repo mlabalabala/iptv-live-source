@@ -35,7 +35,7 @@ jobs:
             from utils.config import config
             open_driver = config.open_driver
           except:
-            open_driver = False
+            open_driver = True
           print(open_driver)')" >> $GITHUB_ENV
       - name: Set up Chrome
         if: env.OPEN_DRIVER == 'True'
